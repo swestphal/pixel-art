@@ -7,7 +7,8 @@
     <link href="assets/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
 </head>
-<body>
+<body >
+
     <header>
         <h1>Lab:PixelArtMaker</h1>
     </header>
@@ -18,23 +19,29 @@
                 <div class="form-control">
                     <h3>Please choose Grid Size</h3>
                     <label for="grid-height">Grid Height
-                        <input type="number">
+                        <input type="number" id="grid-height" name="grid-height" placeholder="5">
                     </label>
                 </div>
 
                 <div class="form-control">
                     <label for="grid-width">Grid width
-                        <input type="number">
+                        <input type="number" id="grid-width" name="grid-width" placeholder="5">
                     </label>
                 </div>
 
                 <div class="form-control">
-                    <h3>Pick a color</h3>
-                    <input type="color" id="myColor">
+                    <div class="row row-center">
+                        <div class="row-box">
+                            <h3 >Pick a color</h3>
+                        </div>
+                        <div class="row-box">
+                            <input type="color" id="myColor">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="form-control">
-                    <button>Generate Grid</button>
+                    <button id="btn-generate">Generate Grid</button>
                 </div>
             </form>
         </section>
