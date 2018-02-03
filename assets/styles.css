@@ -112,7 +112,7 @@ small, .font_small {font-size: 0.707em;}
 
 /**
  *
- * styling
+ * styling content
  *
  */
 
@@ -151,6 +151,9 @@ header {
     border-bottom:1px solid #000;
 }
 
+#grid-output {
+    margin-top:2rem;
+}
 
 .form-control {
     text-align:center;
@@ -161,4 +164,23 @@ footer {
     margin-top:auto;
     padding:20px 0 15px;
     text-align:center;
+}
+
+/**
+ *
+ * styling tables
+ *
+ */
+
+table {
+    margin:0 auto;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    height:20px;
+    width:20px;
 }
