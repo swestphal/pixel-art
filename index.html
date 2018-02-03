@@ -14,22 +14,36 @@
     </header>
 
     <main role="main">
-        <section>
-            <h3>Please choose Grid Size</h3>
-            <label for="grid-height">Grid Height
-                <input type="number">
-            </label>
-            <label for="grid-width">Grid width
-                <input type="number">
-            </label>
+        <section id="grid-definition">
+            <form>
+                <div class="form-control">
+                    <h3>Please choose Grid Size</h3>
+                    <label for="grid-height">Grid Height
+                        <input type="number">
+                    </label>
+                </div>
 
-            <h3>Pick a color</h3>
-            <input type="color" id="myColor">
-            <button>Generate Grid</button>
+                <div class="form-control">
+                    <label for="grid-width">Grid width
+                        <input type="number">
+                    </label>
+                </div>
+
+                <div class="form-control">
+                    <h3>Pick a color</h3>
+                    <input type="color" id="myColor">
+                </div>
+
+                <div class="form-control">
+                    <button>Generate Grid</button>
+                </div>
+            </form>
         </section>
-        <section>
+
+        <section id="grid-output">
         </section>
     </main>
+
     <footer>
         <&hearts;> by Simone Westphal
     </footer>
