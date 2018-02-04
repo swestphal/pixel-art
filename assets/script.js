@@ -52,14 +52,12 @@ var gridPaint = (function() {
             this.classList.add('active');
         });
 
-
     // mouseleave remove class "active"
 
     gridActionBtn.addEventListener('mouseleave',
         function() {
             this.classList.remove('active');
         });
-
 
     // click to generate grid
 

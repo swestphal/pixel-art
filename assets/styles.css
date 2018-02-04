@@ -9,7 +9,6 @@
     src: url("fonts/arcade.ttf");
 }
 
-
 @font-face {
     font-family: 'fontello';
     src: url('fonts/fontello.eot?77909139');
@@ -20,8 +19,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
-
 
 * {
     box-sizing: border-box;
@@ -65,33 +62,6 @@ input:focus {
     color: #fff;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
 *
 * modifier
@@ -105,33 +75,6 @@ input:focus {
 .--text-left {
     text-align: left;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**
 *
@@ -187,33 +130,6 @@ small,
     font-size: 0.707em;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
 *
 * grid elements
@@ -226,33 +142,6 @@ small,
     flex-wrap: wrap;
     justify-content: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**
  *
@@ -337,12 +226,9 @@ header {
     transform: rotate(-13deg);
 }
 
-
-
 #grid-output {
     margin: 2em auto;
 }
-
 
 .form-control {
     text-align: center;
@@ -359,27 +245,6 @@ footer {
     padding: 20px 0 15px;
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**
  *
@@ -404,16 +269,11 @@ td {
 }
 
 
-
-
 /* fontello font */
 
 
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-
-
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-
 
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -462,17 +322,11 @@ td {
     content: '\f301';
 }
 
-
-
-
 /* '' */
 
 .icon-twitter-bird:before {
     content: '\f303';
 }
-
-
-
 
 /* '' */
 
@@ -480,19 +334,12 @@ td {
     content: '\f308';
 }
 
-
-
-
 /* '' */
 
 .icon-linkedin-rect:before {
     content: '\f31b';
 }
 
-
-
-
 /* '' */
 
 
-}
