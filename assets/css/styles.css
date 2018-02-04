@@ -5,7 +5,7 @@
 */
 
 @font-face {
-    font-family: arcade;
+    font-family: 'arcade';
     src: url("../fonts/arcade.ttf");
 }
 
@@ -21,7 +21,8 @@
 }
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -38,8 +39,13 @@ body {
     font-family: 'Cutive Mono', sans-serif;
     min-height: 100vh;
     /* Avoid the IE 10-11 `min-height` bug. */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 a:link,
@@ -137,10 +143,18 @@ small,
 */
 
 .row {
-    flex-direction: row;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex ;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 /**
@@ -183,6 +197,8 @@ header {
 }
 
 #colorContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -223,7 +239,8 @@ header {
     top: 9px;
     font-size: 0.7em;
     display: inline-block;
-    transform: rotate(-13deg);
+    -webkit-transform: rotate(-13deg);
+            transform: rotate(-13deg);
 }
 
 #grid-output {
