@@ -1,7 +1,7 @@
 # Pixel-Art Maker
 
 ### Where to play
-[http://pixel-art/swestphal.net](http://pixel-art/swestphal.net)
+[http://pixel-art/swestphal.net](http://pixel-art.swestphal.net)
 
 
 
