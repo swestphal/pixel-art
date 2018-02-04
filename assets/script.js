@@ -19,6 +19,9 @@ var gridPaint = (function() {
     const inputHeight = document.getElementById('grid-height');
     const inputWidth = document.getElementById('grid-width');
 
+    const currentColor = document.getElementById('currentColor');
+
+    const colorContainer = document.getElementById('colorContainer');
     const colorPicker = document.getElementById('colorPicker');
     const colorPickerSlide = document.getElementById('colorPickerSlide');
 
@@ -27,11 +30,16 @@ var gridPaint = (function() {
     const tablePos = document.getElementById('grid-table');
     let pixelColor = '#000'; // if no color is selected
 
+    // show current color
 
-    // show colorPicker on front-end
+    currentColor.style.background = pixelColor;
 
-    ColorPicker(colorPicker, colorPickerSlide, function(hex, hsv, rgb) { pixelColor = hex; });
+    // show colorPicker and current color on front-end
 
+    ColorPicker(colorPicker, colorPickerSlide, function(hex, hsv, rgb) {
+        pixelColor = hex;
+        currentColor.style.background = hex;
+    });
 
     /*
      * event listener btn "generate grid"

@@ -53,6 +53,17 @@ input:focus {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /**
 *
 * modifier
@@ -62,6 +73,20 @@ input:focus {
 .--no-margin {
     margin: 0;
 }
+
+.--text-left {
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -145,6 +170,17 @@ small,
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /**
 *
 * grid elements
@@ -163,8 +199,19 @@ small,
 
 .row-box {
     padding: 10px;
-    display: flex;
+    display: initial;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -220,6 +267,17 @@ header {
     border-bottom: 1px solid #000;
 }
 
+#colorContainer {
+    display: flex;
+}
+
+#currentColor {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    top: 4px;
+}
 
 #colorPicker {
     width: 4rem;
@@ -254,6 +312,17 @@ footer {
     padding: 20px 0 15px;
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
