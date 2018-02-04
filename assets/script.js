@@ -1,74 +1,117 @@
-const gridActionBtn = document.getElementById('btn-generate');
+/*******************************************************************
+ * Name: gridPaint
+ * Author: Simone Westphal
+ * Desc:
+ * This script generates a grid with the desired width and height
+ * and lets you set pixel in the selected color into the grid.
+ *
+ * It is based on a side-project for the udacity front-end nanodegree
+ * and coded from scratch.
+ *
+ * The color picker is the flexi-picker from David Durman,
+ * as the html5 picker is not implemented in all browsers
+ ********************************************************************/
 
-var pixelColor = '#000';
+var gridPaint = (function() {
 
-gridActionBtn.addEventListener('mouseenter',
-    function() {
-        this.classList.add('active');
-    });
+    // declare variables
 
-gridActionBtn.addEventListener('mouseleave',
-    function() {
-        this.classList.remove('active');
-    });
+    const inputHeight = document.getElementById('grid-height');
+    const inputWidth = document.getElementById('grid-width');
 
+    const colorPicker = document.getElementById('colorPicker');
+    const colorPickerSlide = document.getElementById('colorPickerSlide');
 
-
-
-
-gridActionBtn.addEventListener('click', function(event) {
-    event.preventDefault();
-    this.classList.remove('active');
-    var gridDim = getSizeOfGrid();
-    generateGrid(gridDim[0], gridDim[1]);
-});
-
-ColorPicker(
-    document.getElementById('colorPicker'),
-    document.getElementById('colorPickerSlide'),
-    function(hex, hsv, rgb) {
-        pixelColor = hex;
-    });
-
-var getSizeOfGrid = function() {
-    var inputHeight = document.getElementById('grid-height');
-    var inputWidth = document.getElementById('grid-width');
-    var gridHeight = inputHeight.value || inputHeight.placeholder;
-    var gridWidth = inputWidth.value || inputWidth.placeholder;
-    return ([gridHeight, gridWidth]);
-};
-
-var generateGrid = function(gridHeight, gridWidth) {
-    // create table at grid-table
+    const gridActionBtn = document.getElementById('btn-generate');
 
     const tablePos = document.getElementById('grid-table');
-    const oldTable = document.getElementsByTagName('table')[0];
-    if (oldTable) oldTable.remove();
-    var newTable = document.createElement('table');
-    tablePos.appendChild(newTable);
-    for (var y = 0; y < gridHeight; y++) {
-        var newTableRow = document.createElement('tr');
-        newTable.appendChild(newTableRow);
-        for (var x = 0; x < gridWidth; x++) {
-            var newTableCol = document.createElement('td');
-            newTableRow.appendChild(newTableCol);
-        }
-    };
-    paintInGrid();
-}
+    let pixelColor = '#000'; // if no color is selected
 
-var paintPixel = function(e) {
 
-    // paint td where mouse is clicked
+    // show colorPicker on front-end
 
-    e.target.style.backgroundColor = pixelColor;
-};
+    ColorPicker(colorPicker, colorPickerSlide, function(hex, hsv, rgb) { pixelColor = hex; });
 
-var paintInGrid = function() {
-    // paint with mouseclick in grid
 
-    const tableClick = document.getElementsByTagName('table')[0];
-    tableClick.addEventListener('click', function(e) {
-        paintPixel(e);
+    /*
+     * event listener btn "generate grid"
+     */
+
+    // mousenter add class "active"
+
+    gridActionBtn.addEventListener('mouseenter',
+        function() {
+            this.classList.add('active');
+        });
+
+
+    // mouseleave remove class "active"
+
+    gridActionBtn.addEventListener('mouseleave',
+        function() {
+            this.classList.remove('active');
+        });
+
+
+    // click to generate grid
+
+    gridActionBtn.addEventListener('click', function(event) {
+        gridActionBtn.classList.remove('active');
+        planGrid(event);
     });
-};
+
+    // make grid with given values
+
+    var planGrid = function(event) {
+        event.preventDefault();
+        deleteOldTable();
+        generateGrid(getSizeOfGrid());
+    }
+
+    // delete old table if there is one
+
+    var deleteOldTable = function() {
+        var oldTable = document.getElementsByTagName('table')[0];
+        if (oldTable) oldTable.remove();
+    }
+
+    // get gridsize from userinput
+
+    var getSizeOfGrid = function() {
+        return ({
+            "height": inputHeight.value || inputHeight.placeholder,
+            "width": inputWidth.value || inputWidth.placeholder
+        });
+    }
+
+    // make grid and append it to id=grid-output
+
+    var generateGrid = function(gridSize) {
+        var newTable = document.createElement('table');
+        tablePos.appendChild(newTable);
+        for (var y = 0; y < gridSize['width']; y++) {
+            var newTableRow = document.createElement('tr');
+            newTable.appendChild(newTableRow);
+            for (var x = 0; x < gridSize['height']; x++) {
+                var newTableCol = document.createElement('td');
+                newTableRow.appendChild(newTableCol);
+            }
+        };
+        paintInGrid();
+    }
+
+    // add eventlistener to table element
+
+    var paintInGrid = function() {
+        const tableClick = document.getElementsByTagName('table')[0];
+        tableClick.addEventListener('click', function(e) {
+            paintPixel(e);
+        });
+    };
+
+    // get the target of click and set backgroundColor to colorPicker value
+
+    var paintPixel = function(e) {
+        e.target.style.backgroundColor = pixelColor;
+    };
+})();
