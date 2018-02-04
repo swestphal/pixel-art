@@ -64,6 +64,9 @@ input:focus {
 
 
 
+
+
+
 /**
 *
 * modifier
@@ -77,6 +80,9 @@ input:focus {
 .--text-left {
     text-align: left;
 }
+
+
+
 
 
 
@@ -181,6 +187,9 @@ small,
 
 
 
+
+
+
 /**
 *
 * grid elements
@@ -201,6 +210,9 @@ small,
     padding: 10px;
     display: initial;
 }
+
+
+
 
 
 
@@ -297,6 +309,11 @@ header {
     border-left: none;
 }
 
+#pickColor span {
+    position: relative;
+    top: 5px;
+}
+
 #grid-output {
     margin-top: 2rem;
 }
@@ -312,6 +329,9 @@ footer {
     padding: 20px 0 15px;
     text-align: center;
 }
+
+
+
 
 
 
