@@ -2,8 +2,23 @@ const gridActionBtn = document.getElementById('btn-generate');
 
 var pixelColor = '#000';
 
+gridActionBtn.addEventListener('mouseenter',
+    function() {
+        this.classList.add('active');
+    });
+
+gridActionBtn.addEventListener('mouseleave',
+    function() {
+        this.classList.remove('active');
+    });
+
+
+
+
+
 gridActionBtn.addEventListener('click', function(event) {
     event.preventDefault();
+    this.classList.remove('active');
     var gridDim = getSizeOfGrid();
     generateGrid(gridDim[0], gridDim[1]);
 });
