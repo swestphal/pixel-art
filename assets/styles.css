@@ -6,8 +6,22 @@
 
 @font-face {
     font-family: arcade;
-    src: url("arcade.ttf");
+    src: url("fonts/arcade.ttf");
 }
+
+
+@font-face {
+    font-family: 'fontello';
+    src: url('fonts/fontello.eot?77909139');
+    src: url('fonts/fontello.eot?77909139#iefix') format('embedded-opentype'),
+    url('fonts/fontello.woff?77909139') format('woff'),
+    url('fonts/fontello.ttf?77909139') format('truetype'),
+    url('fonts/fontello.svg?77909139#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 * {
     box-sizing: border-box;
@@ -22,13 +36,23 @@ html {
 }
 
 body {
-    font-size: 1rem;
-    line-height: 1.45rem;
+    font-size: 1em;
+    line-height: 1.45em;
     font-family: 'Cutive Mono', sans-serif;
     min-height: 100vh;
     /* Avoid the IE 10-11 `min-height` bug. */
     display: flex;
     flex-direction: column;
+}
+
+a:link,
+a:visited {
+    color: #000;
+}
+
+a:hover,
+a:active {
+    color: #399c3d;
 }
 
 button:focus,
@@ -40,6 +64,11 @@ input:focus {
     background: #000;
     color: #fff;
 }
+
+
+
+
+
 
 
 
@@ -76,6 +105,11 @@ input:focus {
 .--text-left {
     text-align: left;
 }
+
+
+
+
+
 
 
 
@@ -175,6 +209,11 @@ small,
 
 
 
+
+
+
+
+
 /**
 *
 * grid elements
@@ -187,6 +226,13 @@ small,
     flex-wrap: wrap;
     justify-content: center;
 }
+
+
+
+
+
+
+
 
 
 
@@ -253,8 +299,8 @@ header {
 
 #currentColor {
     display: inline-block;
-    width: 1rem;
-    height: 1rem;
+    width: 1em;
+    height: 1em;
     position: relative;
     top: 15px;
 }
@@ -266,39 +312,41 @@ header {
 }
 
 #colorPicker {
-    width: 4rem;
+    width: 4em;
     cursor: crosshair;
-    margin-top: 1.7rem;
-    height: 4rem;
+    margin-top: 1.7em;
+    height: 4em;
     border: 1px solid #000;
 }
 
 #colorPickerSlide {
-    width: 0.5rem;
+    width: 4em;
     border-left: 2px solid #000;
-    cursor: ns-resize;
-    margin-top: 1.7rem;
-    height: 4rem;
+    cursor: crosshair;
+    margin-top: 1.7em;
+    height: 4em;
     border: 1px solid #000;
     border-left: none;
 }
 
 #pickColor span {
     position: relative;
-    top: 5px;
-    font-size: 1.1rem;
+    top: 9px;
+    font-size: 0.7em;
+    display: inline-block;
+    transform: rotate(-13deg);
 }
 
 
 
 #grid-output {
-    margin: 2rem auto;
+    margin: 2em auto;
 }
 
 
 .form-control {
     text-align: center;
-    width: 540px;
+    width: 560px;
 }
 
 .form-control__subline {
@@ -311,44 +359,6 @@ footer {
     padding: 20px 0 15px;
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -391,4 +401,98 @@ td {
 td {
     height: 20px;
     width: 20px;
+}
+
+
+
+
+/* fontello font */
+
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+
+
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?79368880#fontello') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-facebook-rect:before {
+    content: '\f301';
+}
+
+
+
+
+/* '' */
+
+.icon-twitter-bird:before {
+    content: '\f303';
+}
+
+
+
+
+/* '' */
+
+.icon-github:before {
+    content: '\f308';
+}
+
+
+
+
+/* '' */
+
+.icon-linkedin-rect:before {
+    content: '\f31b';
+}
+
+
+
+
+/* '' */
+
+
 }
