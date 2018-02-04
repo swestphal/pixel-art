@@ -25,14 +25,28 @@ body {
     font-size: 1rem;
     line-height: 1.45rem;
     font-family: 'Cutive Mono', sans-serif;
-    min-height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+    min-height: 100vh;
+    /* Avoid the IE 10-11 `min-height` bug. */
     display: flex;
     flex-direction: column;
 }
 
-button:focus, input:focus {
+button:focus,
+input:focus {
     outline: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
 *
@@ -44,11 +58,24 @@ button:focus, input:focus {
     margin: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 /**
 *
 * font
 *
 */
+
 h1 {
     font-family: 'arcade', sans-serif;
     letter-spacing: 0.1em;
@@ -72,7 +99,9 @@ p {
     margin-bottom: 1.3em;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     margin: 1.414em 0 0.5em;
     font-weight: inherit;
     line-height: 1.2;
@@ -90,9 +119,22 @@ h4 {
     font-size: 1.414em;
 }
 
-small, .font_small {
+small,
+.font_small {
     font-size: 0.707em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
 *
@@ -112,9 +154,20 @@ small, .font_small {
 
 .row-box {
     padding: 10px;
-    flex-direction: column;
     display: flex;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  *
@@ -122,7 +175,9 @@ small, .font_small {
  *
  */
 
-button, input[type="submit"], input[type="reset"] {
+button,
+input[type="submit"],
+input[type="reset"] {
     background: none !important;
     color: inherit;
     border: none;
@@ -138,10 +193,6 @@ input[type="number"] {
     text-align: center;
 }
 
-input[type="color"i] {
-    margin-top: 1.7rem;
-    height: 2rem;
-}
 
 button {
     border: 1px solid #000;
@@ -158,8 +209,27 @@ header {
     border-bottom: 1px solid #000;
 }
 
+
+#colorPicker {
+    width: 4rem;
+    cursor: crosshair;
+    margin-top: 1.7rem;
+    height: 4rem;
+    border: 1px solid #000;
+}
+
+#colorPickerSlide {
+    width: 0.5rem;
+    border-left: 2px solid #000;
+    cursor: ns-resize;
+    margin-top: 1.7rem;
+    height: 4rem;
+    border: 1px solid #000;
+    border-left: none;
+}
+
 #grid-output {
-    margin-top:2rem;
+    margin-top: 2rem;
 }
 
 
@@ -174,6 +244,18 @@ footer {
     text-align: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  *
  * styling tables
@@ -181,14 +263,17 @@ footer {
  */
 
 table {
-    margin:0 auto;
+    margin: 0 auto;
 }
-table, th, td {
+
+table,
+th,
+td {
     border: 1px solid black;
     border-collapse: collapse;
 }
 
 td {
-    height:20px;
-    width:20px;
+    height: 20px;
+    width: 20px;
 }

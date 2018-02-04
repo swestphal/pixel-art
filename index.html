@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Pixel Art Maker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+    <script src="lib/color-picker.js"></script>
 </head>
-<body >
 
+<body>
     <header>
         <h1>Lab:PixelArtMaker</h1>
     </header>
-
     <main role="main">
         <section id="grid-definition">
             <form>
@@ -22,40 +23,36 @@
                         <input type="number" id="grid-height" name="grid-height" placeholder="5">
                     </label>
                 </div>
-
                 <div class="form-control">
                     <label for="grid-width">Grid width
                         <input type="number" id="grid-width" name="grid-width" placeholder="5">
                     </label>
                 </div>
-
                 <div class="form-control">
                     <div class="row row-center">
                         <div class="row-box">
-                            <h3 >Pick a color</h3>
+                            <h3 id="pickColor">Pick a color</h3>
                         </div>
                         <div class="row-box">
-                            <input type="color" id="gridColor">
+                            <div id="colorPicker"></div>
+                            <div id="colorPickerSlide"></div>
                         </div>
                     </div>
                 </div>
-
                 <div class="form-control">
                     <button id="btn-generate">Generate Grid</button>
                 </div>
             </form>
         </section>
-
         <section id="grid-output">
             <div id="grid-table">
-
             </div>
         </section>
     </main>
-
     <footer>
         <&hearts;> by Simone Westphal
     </footer>
     <script src="assets/script.js"></script>
 </body>
+
 </html>
