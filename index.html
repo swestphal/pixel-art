@@ -17,24 +17,22 @@
     <main role="main">
         <section id="grid-definition">
             <form>
-                <div class="form-control">
-                    <h3>Please choose Grid Size</h3>
-                    <label for="grid-height">Grid Height
-                        <input type="number" id="grid-height" name="grid-height" placeholder="5">
-                    </label>
-                </div>
-                <div class="form-control">
-                    <label for="grid-width">Grid width
-                        <input type="number" id="grid-width" name="grid-width" placeholder="5">
-                    </label>
-                </div>
-                <div class="form-control">
-                    <div class="row row-center">
-                        <div class="row-box">
-                            <h3 id="pickColor">Pick a color&nbsp;<span>&rarr;</span></h3>
-                            <p class="--text-left">This <span id="currentColor">&nbsp;</span> is your current Color</p>
+                <div class="row">
+                    <div class="form-control">
+                        <h3>Please choose Grid Size</h3>
+                        <div class="row form-control__subline">
+                            <label for="grid-height">Grid Height
+                                <input type="number" id="grid-height" name="grid-height" placeholder="5" min="1" max="99">
+                            </label>
+                            <label for="grid-width">Grid width
+                                <input type="number" id="grid-width" name="grid-width" placeholder="5" min="1" max="99">
+                            </label>
                         </div>
-                        <div class="row-box">
+                    </div>
+                    <div class="form-control">
+                        <h3 id="pickColor">Pick a color&nbsp;<span>&searr;</span></h3>
+                        <div class="row form-control__subline">
+                            <p class="--text-left">This <span id="currentColor">&nbsp;</span> is your current Color</p>
                             <div id="colorContainer">
                                 <div id="colorPicker"></div>
                                 <div id="colorPickerSlide"></div>
@@ -42,8 +40,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-control">
-                    <button id="btn-generate">Generate Grid</button>
+                </div>
+                <div class="row">
+                    <div class="form-control">
+                        <button id="btn-generate">Generate Grid</button>
+                    </div>
                 </div>
             </form>
         </section>

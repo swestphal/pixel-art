@@ -63,10 +63,6 @@ input:focus {
 
 
 
-
-
-
-
 /**
 *
 * modifier
@@ -80,11 +76,6 @@ input:focus {
 .--text-left {
     text-align: left;
 }
-
-
-
-
-
 
 
 
@@ -184,12 +175,6 @@ small,
 
 
 
-
-
-
-
-
-
 /**
 *
 * grid elements
@@ -199,25 +184,9 @@ small,
 .row {
     flex-direction: row;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
-
-.row-center {
-    align-items: center;
-}
-
-.row-box {
-    padding: 10px;
-    display: initial;
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -259,8 +228,11 @@ input[type="reset"] {
 input[type="number"] {
     border: none;
     border-bottom: 1px solid #000;
-    width: 30px;
+    width: 45px;
     text-align: center;
+    font-size: 1.414em;
+    font-family: 'Cutive Mono', sans-serif;
+    font-size: 1.999em;
 }
 
 
@@ -269,10 +241,6 @@ button {
     padding: 10px;
 }
 
-main {
-    max-width: 60rem;
-    margin: 0 auto;
-}
 
 header {
     text-align: center;
@@ -288,7 +256,13 @@ header {
     width: 1rem;
     height: 1rem;
     position: relative;
-    top: 4px;
+    top: 15px;
+}
+
+#colorContainer {
+    margin-left: 20px;
+    position: relative;
+    top: -38px;
 }
 
 #colorPicker {
@@ -312,15 +286,23 @@ header {
 #pickColor span {
     position: relative;
     top: 5px;
+    font-size: 1.1rem;
 }
 
+
+
 #grid-output {
-    margin-top: 2rem;
+    margin: 2rem auto;
 }
 
 
 .form-control {
     text-align: center;
+    width: 540px;
+}
+
+.form-control__subline {
+    line-height: 51px;
 }
 
 footer {
@@ -329,6 +311,37 @@ footer {
     padding: 20px 0 15px;
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
