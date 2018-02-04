@@ -163,7 +163,7 @@ input[type="reset"] {
 input[type="number"] {
     border: none;
     border-bottom: 1px solid #000;
-    width: 45px;
+    width: 63px;
     text-align: center;
     font-size: 1.414em;
     font-family: 'Cutive Mono', sans-serif;
@@ -239,6 +239,9 @@ header {
     line-height: 51px;
 }
 
+.form-control__subline:first-of-type label {
+    margin-right:20px;
+}
 footer {
     border-top: 1px solid #000;
     margin-top: auto;
